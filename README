@@ -1,1 +1,48 @@
-# Berlin_Airbnb_and_Venue_Clusters_Neighborhood
+Berlin_Airbnb Market and Venue Clusters by Neighborhood
+
+Table of Contents
+
+    Introduction
+    Import Packages & Read in Data
+    Pre-processing
+    Exploratory Data Analysis
+    Feature Engineering & Exploration: Occupancy, Revenue per Month
+    Linear Regression Model
+    Choropleth Map of Revenue by Borough
+    Map, Segment, and Cluster Prenzlauer Berg / Pankow by Venues
+    Summary Results & Recommendations
+    Future Areas for Analysis
+
+1. Introduction
+
+As one of Europe's fastest-growing economies, Berlin has quickly grown into a tourism and residential real estate magnet. Imagine a hospitality chain or real estate developer aiming to enter the Berlin market to capitalize on growth. How could we help them develop an effective neighborhood-level entry strategy?
+
+A great place to turn to for data to help us s Airbnb, which is a strong proxy for residential real estate and hospitality business development in Berlin. In order to best structure our analysis, get an overview, clarify our assumptions, and understand what's needed, let's break down the problem into business questions, data questions, and data needs:
+
+Business question 1: Which of Berlin's boroughs / neighborhoods, should we enter first?
+Data question 1 : Which boroughs and neighborhoods have the highest mean / median monthly occupancy and revenue?
+Data need 1: Airbnb listing price and occupancy data by neighborhood, Berlin geocoding and geojson data (for mapping)
+
+Business question 2: What is the optimal price point?
+Data question 2: What is the mean / median price by borough and neighborhood?
+Data need 2: Airbnb listing price per night by neighborhood, Berlin geocoding and geojson data (for mapping)
+
+Business question 3: What status does a business / chain / developer garner?
+Data question 3: What is the occupancy and revenue premium for an Airbnb superhost?
+Data need 3: Airbnb listing superhost status along with above data
+
+Business question 4: What unit capacity should we focus on?
+Data question 4: What are differences in mean / median monthly price, occupancy, revenue by capacity?
+Data need 4: Airbnb listing capacity data along with above data
+
+Business question 5: What is the estimated revenue of a brand new listing?
+Data question 5: What are factors can be used to predict monthly revenue?
+Data need 5: Airbnb listing variables that can be used as predictors, monthly revenue as labeled target
+
+Business question 6: What neighborhoods are most promising for fit and local business partnerships?
+Data question 6: What are Berlin's venues and venue categories by neighborhood and how do they cluster?
+Data need 6: Berlin neighborhoods data, venue info and geolocation data using Foursquare API, Berlin geocoding and geojson data
+
+In this analysis, we'll work with a data set of >22,500 Airbnb listings in Berlin, including 96 variables downloaded from Kaggle (https://www.kaggle.com/brittabettendorf/berlin-airbnb-data?select=listings_summary.csv). You can obtain original source Airbnb data for many cities around the world on Inside Airbnb (http://insideairbnb.com/get-the-data.html). Berlin geojson data was downloaded from https://raw.githubusercontent.com/pape1412/airbnb/master/data/berlin_neighbourhood_groups.geojson, originally sourced from https://data.technologiestiftung-berlin.de/dataset/bezirksgrenzenBerlin. Berlin's neighborhoods, specifically for Pankow, were scraped from Wikipedia (https://en.wikipedia.org/wiki/Boroughs_and_neighborhoods_of_Berlin) using BeautifulSoup. Venue data was obtained using the Foursquare API.
+
+Our analysis, results, discussion, and future areas of research is useful for any hospitality, real estate, or tourism-adjacent business interested in entering or expanding in Berlin, as well as for public planning / zoning.
